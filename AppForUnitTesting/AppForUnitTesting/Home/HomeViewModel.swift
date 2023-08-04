@@ -16,10 +16,17 @@ class HomeViewModel {
     }
     
     func loadData() {
+        view?.showLoading()
         service.fetchFeed { [weak self] result in
+            view?.hideLoading()
             switch result {
             case .success(let result):
-                self?.view?.showResult(result: result)
+                if result.isEmpty {
+                    self?.view?.showEmptView()
+                }
+                else {
+                    self?.view?.showResult(result: result)
+                }
             case .failure:
                 self?.view?.showError()
             }

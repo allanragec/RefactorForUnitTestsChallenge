@@ -8,6 +8,9 @@
 import UIKit
 
 protocol HomeDisplayable: AnyObject {
+    func showLoading()
+    func hideLoading()
+    func showEmptView()
     func showResult(result: [String])
     func showError()
 }
@@ -26,8 +29,20 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeDisplayable {
+    func showLoading() {
+        print("show loading")
+    }
+    
+    func hideLoading() {
+        print("hide loading")
+    }
+    
+    func showEmptView() {
+        print("showEmptyView")
+    }
+    
     func showResult(result: [String]) {
-        print("result is: \(result)")
+        print("showResult, result is: \(result)")
     }
     
     func showError() {
