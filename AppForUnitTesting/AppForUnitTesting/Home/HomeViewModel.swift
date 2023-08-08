@@ -7,18 +7,22 @@
 
 import Foundation
 
-class HomeViewModel {
-    private let service = HomeService()
+protocol HomeViewModelProtocol {
+    func loadData()
+}
+
+class HomeViewModel: HomeViewModelProtocol {
+    private let service: HomeServiceProtocol
     weak var view: HomeDisplayable?
     
-    init() {
-        
+    init(service: HomeServiceProtocol) {
+            self.service = service
     }
     
     func loadData() {
         view?.showLoading()
         service.fetchFeed { [weak self] result in
-            view?.hideLoading()
+            self?.view?.hideLoading()
             switch result {
             case .success(let result):
                 if result.isEmpty {

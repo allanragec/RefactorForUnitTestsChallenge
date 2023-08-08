@@ -16,11 +16,16 @@ protocol HomeDisplayable: AnyObject {
 }
 
 class HomeViewController: UIViewController {
-    lazy var viewModel: HomeViewModel = {
-        let vm = HomeViewModel()
-        vm.view = self
-        return vm
-    }()
+    var viewModel: HomeViewModelProtocol
+    
+    init(viewModel : HomeViewModelProtocol = HomeViewModel(service: HomeService())){
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+        
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
