@@ -8,11 +8,11 @@
 import Foundation
 
 class HomeViewModel {
-    private let service = HomeService()
+    private let service: HomeServicing
     weak var view: HomeDisplayable?
     
-    init() {
-        
+    init(service: HomeServicing) {
+        self.service = service
     }
     
     func loadData() {

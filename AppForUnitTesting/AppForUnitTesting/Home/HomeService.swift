@@ -7,9 +7,12 @@
 
 import Foundation
 
-class HomeService {
+protocol HomeServicing {
     typealias FeedResult = Result<[String], Error>
-    
+    func fetchFeed(completion: (FeedResult) -> Void)
+}
+
+class HomeService: HomeServicing {
     func fetchFeed(completion: (FeedResult) -> Void) {
         print("HomeService.fetchFeed can't be executed during tests")
         
