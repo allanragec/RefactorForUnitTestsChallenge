@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+public class FeatureFlagService {
+    public init() {}
+    
+    public func isEnabled(flag: String) -> Bool {
+        print("FeatureFlagService.isEnabled can't be executed during tests")
+        return Bool.random()
+    }
+}

@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+public class Analytics {
+    public init() {}
+    
+    public func sendEvent(name: String, properties: [String: String]) {
+        print("Analytics.sendEvent can't be executed during tests")
+        print("Analytics.sendEvent name: \(name) , properties: \(properties)")
+    }
+}

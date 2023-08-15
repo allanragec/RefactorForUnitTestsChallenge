@@ -51,6 +51,39 @@
                ReferencedContainer = "container:AppForUnitTesting.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9E8FDB252A8C1CCC00C2DAC6"
+               BuildableName = "FeatureFlagTests.xctest"
+               BlueprintName = "FeatureFlagTests"
+               ReferencedContainer = "container:AppForUnitTesting.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9E8FDB4D2A8C28B100C2DAC6"
+               BuildableName = "AnalyticsTests.xctest"
+               BlueprintName = "AnalyticsTests"
+               ReferencedContainer = "container:AppForUnitTesting.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9E8FDB722A8C2A5600C2DAC6"
+               BuildableName = "ObservabilityTests.xctest"
+               BlueprintName = "ObservabilityTests"
+               ReferencedContainer = "container:AppForUnitTesting.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

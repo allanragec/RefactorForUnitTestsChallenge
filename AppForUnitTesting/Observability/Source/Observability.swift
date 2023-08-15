@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+public class Observability {
+    public init() {}
+    
+    public func sendHandledError(title: String, properties: [String: String]) {
+        print("Observability.sendHandledError can't be executed during tests")
+        print("Observability.sendHandledError title: \(title) , properties: \(properties)")
+    }
+}

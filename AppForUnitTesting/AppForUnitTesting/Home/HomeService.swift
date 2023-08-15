@@ -23,6 +23,6 @@ class HomeService: HomeServicing {
             "option D"
         ]
         
-        completion(.success(result))
+        completion(Bool.random() ? .success(result) : .failure(CustomErrors.generic))
     }
 }
